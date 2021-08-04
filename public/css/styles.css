@@ -10,7 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
-    max-width: 100%;
+    width: 100%;
     background-color: #ebebeb;
 }
 
@@ -19,7 +19,7 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100vw;
-    height: 20vh;
+    height: 25vh;
     background-color:#EAC926;       
 }
 
@@ -59,11 +59,11 @@
     display:inline-block;
     position: absolute;
     background-color: #fff;
-    width: 22px;
+    width: 25px;
     height: 25px; 
     font-size: 13px;
     padding: 7px 0 2px 8px;
-    margin: 3px 0 3px 130px;
+    margin: 3px 0 3px 132px;
      
 }
     
@@ -103,11 +103,17 @@
 
 /* header completado */
 
+#banner {
+    width: 100vw;
+
+}
+
 #banner img{
-    display: none;
+    display: inline-block;
     margin: auto;
     width: 100%;
     height: 70px;
+    object-fit: cover;
 }
 
 /* main */
@@ -129,6 +135,7 @@
 .main-productos .main-sections .producto{
     display: flex;
     flex-wrap: wrap;
+    position: relative;
     line-height:25px;
     background-color: #fff;
     margin-bottom: 10px;
@@ -139,14 +146,14 @@
     display: block;
     font-size: 16px;
     color: #39b54a;
-    border: 1px solid #39b54a;;
+    border: 1px solid #39b54a;
     border-radius: 50%;
     width: 30px;
     height: 30px;
     padding: 5px;
-    right: -250px;
-    top: 15px;
-    position: relative;
+    right: 20px;
+    top: -15px;
+    position: absolute;
     background-color: #fff;   
 }
 
@@ -154,6 +161,7 @@
     padding: 15px;
     border: 1px solid #ebebeb ;
     width: 300px;  
+    position: relative;
 }
 
 .producto h3 {
@@ -185,7 +193,8 @@
     justify-content: center;
     text-align: center;
     background-color: #fff;
-    max-width: 90%;  
+    width: 100%;
+    height: 650px;
 }
 
 .container .section-foot {
@@ -241,7 +250,7 @@
         margin: auto;
         text-align: center;
         width: 100%;
-        grid-template-columns: 1fr 170px 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .container .header-logo .barra{
@@ -293,9 +302,31 @@
         margin: 0 7px;
     }
 
-    .header-logo img {
-        min-width: 300px;
-        max-height: 600px;  
+    .container .header-logo .barra{
+        width: 100%;
+        margin: auto;
+        align-items: center;      
+    }
+
+    .header-logo .barra input{
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .barra i {
+        font-size: 14px;
+        margin: 3px 10px;
+        right: 0;
+         
+    }
+    
+    #banner {
+        height: 200px;
+    
+    }
+    
+    #banner img{
+        height: 100%;
     }
 
     .main-productos {
@@ -328,33 +359,90 @@
         width: 650px;  
     }
 
+    .container footer{
+        width: 100%;
+        height: 600px;
+    }
+    
 }
 
 
-@media (min-width: 1400px) {
+@media (min-width: 1024px) {
 
-    .main-sections{
-        grid-template-columns: repeat(4, 300px);   
-    }
-
-    .main-productos .section-titulo {
-        width: 1340px;
-    }
-
-    .header-logo img {
-        min-width: 450px; 
-    }
-
-    .container footer{
-        
-        width: 1350px;  
+    .container{
+        width: 100vw;
     }
 
     .container .header-logo{
-        width: 95%;
-        grid-template-columns: 1fr 300px 1fr;
+        min-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        gap: 20px;
     }
-    
+
+    .container .header-logo .barra{
+        display: flex;
+        margin: auto;    
+    }
+
+    .container .header-logo img{
+        display: block;
+        margin-left: 15px;
+        padding: 0;
+        width: 350px;
+        
+    }
+
+    .barra{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+        height: 40px;
+        margin: 25px 0;
+        border-radius: 5px;  
+    }
+
+
+    .container .main-productos .main-sections{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+        padding: 0 10px;
+        gap: 20px;
+    }
+
+    .container .main-productos .main-sections article{
+        width: 230px;
+    }
+
+    .main-productos .section-titulo{
+        display: inline-block;
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .main-productos .main-sections .producto{
+        margin-bottom: 0px;
+        width: 100%;
+        
+    }
+
+    .producto img{
+        width: 100%;
+    }
+
+    .producto .precio{
+        width: 100%; 
+        height: 100%; 
+        position: relative;
+    }
+
+    .container footer{
+        width: 100%;  
+    }
 
 }
  
